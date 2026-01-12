@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ------------------------------------------------------------------
+       LINKEDIN-QUALITY COLOR SYSTEM (LIGHT MODE)
+       Professional | Balanced | Accessible | Enterprise UI
+    ------------------------------------------------------------------ */
+
+    /* SURFACE */
+    --background: 0 0% 100%;
+    --foreground: 222 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 20% 15%;
+
+    /* BRAND PRIMARY — LinkedIn-style blue */
+    --primary: 215 77% 45%;          /* #0A66C2 */
+    --primary-foreground: 210 40% 98%;
+
+    /* SECONDARY — professional neutral slate */
+    --secondary: 220 14% 92%;        /* soft slate */
+    --secondary-foreground: 222 20% 20%;
+
+    /* MUTED — modern gray */
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 10% 46%;
+
+    /* ACCENT — lighter LinkedIn blue */
+    --accent: 213 92% 58%;           /* lighter blue */
+    --accent-foreground: 210 40% 98%;
+
+    /* DESTRUCTIVE — enterprise red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* UI SYSTEM */
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 215 77% 45%;
+
+    --radius: 0.5rem;
+  }
+
+  /* ------------------------------------------------------------------
+     DARK MODE — Elegant, minimal, LinkedIn-inspired night theme
+  ------------------------------------------------------------------ */
+  .dark {
+    --background: 222 22% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 222 22% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 222 22% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 215 77% 55%; /* brighten slightly for dark mode */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 222 14% 22%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 222 14% 22%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 213 92% 62%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 14% 22%;
+    --input: 222 14% 22%;
+    --ring: 215 77% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hover animation — unchanged */
+.job-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}

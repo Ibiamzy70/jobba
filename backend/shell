@@ -1,0 +1,7 @@
+from accounts.models import User
+from employers.models import Employer
+
+for user in User.objects.filter(role="employer"):
+    Employer.objects.get_or_create(user=user)
+
+print("Done.")
